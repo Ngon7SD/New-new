@@ -3,6 +3,7 @@ import Deck from "./Deck";
 import { listDecks } from "../../utils/api";
 import { Link } from "react-router-dom";
 
+
 export default function DeckList() {
   const [decks, setDecks] = useState([]);
 
@@ -34,8 +35,8 @@ export default function DeckList() {
   ));
   return (
     <main>
-      <Link className="btn btn-secondary" to="/decks/new">
-        + Create Deck
+      <Link className=" mb-2 btn btn-secondary" to="/decks/new">
+        <span class="oi oi-plus"></span> Create Deck
       </Link>
       <div>{deckMap}</div>
     </main>

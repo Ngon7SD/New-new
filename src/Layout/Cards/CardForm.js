@@ -10,7 +10,6 @@ export default function CardForm({
   handleSubmit,
   handleCancel,
   title,
- 
 }) {
   const { deckId, cardId } = useParams();
   const [deck, setDeck] = useState([]);
@@ -58,23 +57,28 @@ export default function CardForm({
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <span className="oi oi-home"></span> Home
+            </Link>
           </li>
           <li className="breadcrumb-item">
             <Link to={`/decks/${deckId}`}>{deck.name}</Link>
           </li>
-          <li className="breadcrumb-item active">{title} Card {cardId}</li>
+          <li className="breadcrumb-item active">
+            {title} Card {cardId}
+          </li>
         </ol>
       </nav>
+      <h2>{deck.name}: {title} Card</h2>
       <div className="form-group">
         <label htmlFor="front">Front</label>
-        <form >
+        <form>
           <div>
             <textarea
               placeholder="Front side of card"
               className="form-control"
               id="front"
-              name = "front"
+              name="front"
               rows="3"
               onChange={handleChange}
               value={form.front}
@@ -87,7 +91,7 @@ export default function CardForm({
               className="form-control"
               id="back"
               rows="3"
-              name = "back"
+              name="back"
               placeholder="Back side of card"
               onChange={handleChange}
               value={form.back}

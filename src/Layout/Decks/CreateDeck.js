@@ -38,6 +38,7 @@ export default function CreateDeck() {
       handleSubmit = {handleSubmit}
       handleChange = {handleChange}
       form = {form}
+      title = "Create"
       />
   )
     

@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { deleteCard } from "../../utils/api";
 
-export default function Card({id, front, back, deckId}){
+export default function Card({ id, front, back, deckId }) {
   const { url } = useRouteMatch();
   const history = useHistory();
 
@@ -17,16 +17,28 @@ export default function Card({id, front, back, deckId}){
     }
   };
 
+  return (
+    <div className="card mb-2">
 
+      <div className="d-flex justify-content-between">
+        <p className="text-wrap col text-center">{front}</p>
+        <p className="text-right col text-center">{back}</p>
+      </div>
 
-    return (
-      <div className="border rounded">
-        <p className="text-wrap">{front}</p>
-        <p className="text-right">{back}</p>
-        <Link to = {`${url}/cards/${id}/edit`} className="btn btn-secondary">Edit</Link>
-        <button onClick={handleDelete} className="btn btn-danger">
-          Delete
+      <div className="d-flex justify-content-between">
+        <div>
+          <Link
+            to={`${url}/cards/${id}/edit`}
+            className=" ml-2 mb-2 btn btn-secondary"
+          >
+            <span className="oi oi-pencil"></span> Edit
+          </Link>
+          
+        </div>
+        <button onClick={handleDelete} className="mr-2 mb-2 btn btn-danger">
+          <span className="oi oi-trash"></span>
         </button>
       </div>
-    );
+    </div>
+  );
 }
