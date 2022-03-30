@@ -2,7 +2,7 @@
   "decks": [
     {
       "id": 1,
-      "name": "Rendering in React CARSTON IS # 1",
+      "name": "CARSTON IS #1",
       "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
     },
     {
@@ -11,44 +11,14 @@
       "id": 2
     },
     {
-      "name": "sdv sdv",
-      "description": "asdvsdv",
+      "name": "deck 1",
+      "": "deck 1",
       "id": 3
     },
     {
-      "name": "sdsdv",
-      "description": "asdvsdv",
+      "name": "deck 2 ",
+      "": "deck 2",
       "id": 4
-    },
-    {
-      "name": "sdvsdv",
-      "description": "asdvsdv",
-      "id": 5
-    },
-    {
-      "name": "dfvadfvadsfv",
-      "description": "asdvasdvasdv",
-      "id": 7
-    },
-    {
-      "": "sdvsadvs",
-      "name": "sadvsdvsdv",
-      "id": 8
-    },
-    {
-      "": "fgbfgb",
-      "name": "dfgbfdbfgb",
-      "id": 9
-    },
-    {
-      "name": "xcz xc ",
-      "": "xc xzc xc ",
-      "id": 10
-    },
-    {
-      "name": "dfgbfgb",
-      "": "sfgbsfgbsfgb",
-      "id": 11
     }
   ],
   "cards": [

@@ -11,8 +11,7 @@ export default function EditCard(){
 
     const { deckId, cardId } = useParams();
 
-    const [deck, setDeck] = useState([]);
-    const [card, setCard] = useState({})
+    const [setDeck] = useState([]);
     const [ form, setForm ] = useState(initialFormState)
 
     const history = useHistory();
@@ -34,7 +33,7 @@ export default function EditCard(){
         }
         fetchDeck();
         return () => ac.abort();
-    },[deckId])
+    },[deckId, setDeck])
 
      useEffect(()=> {
          const ac = new AbortController();
@@ -60,7 +59,7 @@ export default function EditCard(){
   const handleSubmit = (event) => {
     event.preventDefault();
     async function fetchUpdateCard() {
-      const response = await updateCard(form);
+      updateCard(form);
       setForm({ initialFormState });
       history.push(`/decks/${deckId}`);
     }
@@ -81,7 +80,7 @@ console.log(form)
        handleChange = {handleChange}
        handleCancel = {handleCancel}
        title = {"Edit"}
-
+       
        />
     )
 }

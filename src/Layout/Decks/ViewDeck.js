@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import CardsList from "../Cards/CardsList";
-import { readDeck, deleteDeck, updateDeck } from "../../utils/api";
+import { readDeck, deleteDeck } from "../../utils/api";
 
 export default function ViewDeck(){
  const params = useParams();

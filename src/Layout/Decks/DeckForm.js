@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function DeckForm({form, handleCancel, handleChange, handleSubmit}) {
   return (

@@ -10,6 +10,7 @@ export default function CardForm({
   handleSubmit,
   handleCancel,
   title,
+ 
 }) {
   const { deckId, cardId } = useParams();
   const [deck, setDeck] = useState([]);
@@ -62,7 +63,7 @@ export default function CardForm({
           <li className="breadcrumb-item">
             <Link to={`/decks/${deckId}`}>{deck.name}</Link>
           </li>
-          <li className="breadcrumb-item active">{title} Card</li>
+          <li className="breadcrumb-item active">{title} Card {cardId}</li>
         </ol>
       </nav>
       <div className="form-group">

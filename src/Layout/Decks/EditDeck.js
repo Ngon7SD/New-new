@@ -36,7 +36,7 @@ export default function EditDeck(){
     const handleSubmit = (event) => {
       event.preventDefault();
       async function fetchDeck() {
-        const response = await updateDeck(form);
+        updateDeck(form);
         setForm(initialFormState);
         history.push(`/decks/${deckId}`);
       }
